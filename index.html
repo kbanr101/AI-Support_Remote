@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Technical Support Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Technical Support Chat</h1>
+        <p>Describe your technical issue or question:</p>
+        <form action="/ask" method="POST">
+            <input type="text" name="user_input" id="user-input" required>
+            <button type="submit" id="submit-button">Ask</button>
+        </form>
+        <div class="chat">
+            <div class="user-message">
+                <h3>You:</h3>
+                <p id="user-response">{{ user_input }}</p>
+            </div>
+            <div class="ai-message">
+                <h3>AI Response:</h3>
+                <p id="ai-response">{{ ai_response }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
